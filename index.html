@@ -1,41 +1,53 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Capture Photo</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<head>
+    <title>Subida de fotos</title>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-    var pictureSource;   // picture source
-    var destinationType; // sets the format of returned value
+        // Esperar a que cargue PhoneGap
+        document.addEventListener("deviceready", onDeviceReady, false);
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready",onDeviceReady,false);
+        // PhoneGap listo
+        function onDeviceReady() {
+           // lo que tengas que hacer
+        }
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        pictureSource=navigator.camera.PictureSourceType;
-        destinationType=navigator.camera.DestinationType;
-    }
+        function getImage() {
+            navigator.camera.getPicture(uploadPhoto, function(message) {
+                  alert('error al capturar imagen');
+            },{
+                  quality: 50,
+                  destinationType: navigator.camera.DestinationType.FILE_URI,
+                  sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+            });
+        }
 
-  
-    </script>
-  </head>
-  <body>   
-    <div class="api-div" id="api-camera">
-                <h2>Camera</h2>
-				<blockquote>
-  					<p>The <code>camera</code> object provides access to the device's default camera application.</p>
-				</blockquote>
-				<h4 class="help"><b>Take a Picture</b> using device camera.<br/>
-				<b>Select</b> to get picture from album or library.</h4>
-				<a class="btn deux" onclick="take_pic();">Take a Picture</a>
-				<a class="btn deux" onclick="album_pic();">Select</a>
-				<div class="result-block"></div>			
-      			<img id="cameraImage" src="" />
-			</div>
-            <script type="text/javascript" charset="utf-8" src="camera.js"></script>
-  </body>
+        function uploadPhoto(imageURI) {
+            var options = new FileUploadOptions(),
+                  params = new Object ;
+            options.fileKey="file";
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.mimeType="image/jpeg";
+
+            params.value1 = "test";
+            params.value2 = "param";
+
+            options.params = params;
+            options.chunkedMode = false;
+          
+            var ft = new FileTransfer();
+            ft.upload(imageURI,"http://miservidor.com/services/upload.php",
+               function(){
+                   console.log('imagen subida correctamente');
+               },
+               function(err){
+                   console.log('error al subir la imagen, error code: ' + err.code);
+               },
+               options);
+        }
+        </script>
+</head>
+<body>
+    <button onclick="getImage();" id='subir-foto'>Subir foto</button>
+</body>
 </html>
