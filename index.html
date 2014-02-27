@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Subida de fotos</title>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        // Esperar a que cargue PhoneGap
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // PhoneGap listo
+        function onDeviceReady() {
+           // lo que tengas que hacer
+        }
+
+        function getImage() {
+            navigator.camera.getPicture(uploadPhoto, function(message) {
+                  alert('error al capturar imagen');
+            },{
+                  quality: 50,
+                  destinationType: navigator.camera.DestinationType.FILE_URI,
+                  sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+            });
+        }
+
+        function uploadPhoto(imageURI) {
+            var options = new FileUploadOptions(),
+                  params = new Object ;
+            options.fileKey="file";
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.mimeType="image/jpeg";
+
+            params.value1 = "test";
+            params.value2 = "param";
+
+            options.params = params;
+            options.chunkedMode = false;
+          
+            var ft = new FileTransfer();
+            ft.upload(imageURI,"http://miservidor.com/services/upload.php",
+               function(){
+                   console.log('imagen subida correctamente');
+               },
+               function(err){
+                   console.log('error al subir la imagen, error code: ' + err.code);
+               },
+               options);
+        }
+        </script>
+</head>
+<body>
+    <button onclick="getImage();" id=”subir-foto”>Subir foto</button>
+</body>
+</html>
