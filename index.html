@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Subida de fotos</title>
-    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-        <script type="text/javascript" charset="utf-8">
+  <head>
+    <title>Capture Photo</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
     var pictureSource;   // picture source
     var destinationType; // sets the format of returned value
@@ -56,7 +58,6 @@
       // The inline CSS rules are used to resize the image
       //
       largeImage.src = imageURI;
-      
     }
 
     // A button will call this function
@@ -91,8 +92,8 @@
     }
 
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <button onclick="capturePhoto();">Capture Photo</button> <br>
     <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
     <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
