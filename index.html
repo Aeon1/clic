@@ -56,27 +56,7 @@
       // The inline CSS rules are used to resize the image
       //
       largeImage.src = imageURI;
-      var options = new FileUploadOptions(),
-                  params = new Object ;
-            options.fileKey="file";
-            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
-            options.mimeType="image/jpeg";
-
-            params.value1 = "test";
-            params.value2 = "param";
-
-            options.params = params;
-            options.chunkedMode = false;
-          
-            var ft = new FileTransfer();
-            ft.upload(imageURI,"http://innovaciongubernamental.gob.mx/clicmazatlan/movil/galeriainicio.php",
-               function(){
-                   console.log('imagen subida correctamente');
-               },
-               function(err){
-                   console.log('error al subir la imagen, error code: ' + err.code);
-               },
-               options);
+      
     }
 
     // A button will call this function
