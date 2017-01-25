@@ -15,6 +15,9 @@
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.innovacion.clic"
+        },
+        "cordova-plugin-firebase": {
+            "PACKAGE_NAME": "com.innovacion.clic"
         }
     },
     "dependent_plugins": {}
