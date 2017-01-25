@@ -15,7 +15,12 @@ var mainView = myApp.addView('.view-main', {
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
 });
-
+window.FirebasePlugin.getToken(function(token) {
+    // save this server-side and use it to push notifications to this device
+    alert(token);
+}, function(error) {
+    alert(error);
+});
 
 // Now we need to run the code that will be executed only for About page.
 
