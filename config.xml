@@ -28,6 +28,6 @@
     <plugin name="cordova-plugin-console" spec="1.0.5" />
     <plugin name="cordova-plugin-statusbar" spec="1.0.1" />
     <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
-    <plugin name="cordova-plugin-fcm-config">
+    <plugin name="cordova-plugin-fcm-config"/>
     <plugin name="cordova-plugin-fcm" spec="~2.1.1" />
 </widget>
