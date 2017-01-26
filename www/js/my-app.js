@@ -15,10 +15,10 @@ var mainView = myApp.addView('.view-main', {
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
 });
-window.cordova.plugins.firebase.messaging.subscribe("New Topic");
-window.cordova.plugins.firebase.messaging.onMessage(function(payload) {
-    alert("New FCM message: ", payload);
-});
+//window.cordova.plugins.firebase.messaging.subscribe("New Topic");
+//window.cordova.plugins.firebase.messaging.onMessage(function(payload) {
+//    alert("New FCM message: ", payload);
+//});
 
 // Now we need to run the code that will be executed only for About page.
 
