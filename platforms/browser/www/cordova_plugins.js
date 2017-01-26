@@ -23,6 +23,14 @@ module.exports = [
         "clobbers": [
             "FirebasePlugin"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+        "id": "cordova-plugin-fcm.FCMPlugin",
+        "pluginId": "cordova-plugin-fcm",
+        "clobbers": [
+            "FCMPlugin"
+        ]
     }
 ];
 module.exports.metadata = 

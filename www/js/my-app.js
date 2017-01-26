@@ -46,10 +46,12 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     myApp.alert('Here comes About page');
 })
 function suscribir(){
-    window.FirebasePlugin.getToken(function(token) {
-    // save this server-side and use it to push notifications to this device
+FCMPlugin.getToken(
+  function(token){
     alert(token);
-}, function(error) {
-    alert(error);
-});
+  },
+  function(err){
+    alert('error retrieving token: ' + err);
+  }
+)
 }
