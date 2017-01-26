@@ -46,12 +46,5 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     myApp.alert('Here comes About page');
 })
 function suscribir(){
-FCMPlugin.getToken(
-  function(token){
-    alert(token);
-  },
-  function(err){
-    alert('error retrieving token: ' + err);
-  }
-)
+window.cordova.plugins.firebase.messaging.subscribe("New Topic",function(msg){alert(msg);}, function(err){alert(err);} );
 }
