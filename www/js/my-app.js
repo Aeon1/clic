@@ -46,5 +46,10 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     myApp.alert('Here comes About page');
 })
 function suscribir(){
-    window.FirebasePlugin.subscribe("example");
+    window.FirebasePlugin.getToken(function(token) {
+    // save this server-side and use it to push notifications to this device
+    alert(token);
+}, function(error) {
+    alert(error);
+});
 }
