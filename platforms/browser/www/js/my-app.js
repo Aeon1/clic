@@ -45,6 +45,6 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     myApp.alert('Here comes About page');
 })
-function suscribir(){
-window.cordova.plugins.firebase.messaging.subscribe("New Topic",function(msg){alert(msg);}, function(err){alert(err);} );
-}
+window.cordova.plugins.firebase.messaging.onMessage(function(payload) {
+    console.log("New FCM message: ", payload);
+});

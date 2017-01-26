@@ -226,7 +226,7 @@
     "cordova-plugin-firebase-messaging": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-firebase-messaging@*"
+            "id": "cordova-plugin-firebase-messaging@~0.9.0"
         },
         "is_top_level": true,
         "variables": {}
