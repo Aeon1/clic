@@ -14,6 +14,7 @@ var mainView = myApp.addView('.view-main', {
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+    window.FirebasePlugin.subscribe("example");
 });
 //window.cordova.plugins.firebase.messaging.subscribe("New Topic");
 //window.cordova.plugins.firebase.messaging.onMessage(function(payload) {
