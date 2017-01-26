@@ -32,7 +32,8 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.5",
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-firebase": "0.1.19",
-    "cordova-plugin-fcm": "2.1.1"
+    "cordova-plugin-fcm": "2.1.1",
+    "cordova-plugin-fcm-config": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

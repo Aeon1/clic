@@ -21,6 +21,9 @@
         },
         "cordova-plugin-fcm": {
             "PACKAGE_NAME": "com.innovacion.clic"
+        },
+        "cordova-plugin-fcm-config": {
+            "PACKAGE_NAME": "com.innovacion.clic"
         }
     },
     "dependent_plugins": {}
