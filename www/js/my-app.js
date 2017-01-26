@@ -14,7 +14,7 @@ var mainView = myApp.addView('.view-main', {
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
-    window.FirebasePlugin.subscribe("example");
+    
 });
 //window.cordova.plugins.firebase.messaging.subscribe("New Topic");
 //window.cordova.plugins.firebase.messaging.onMessage(function(payload) {
@@ -45,3 +45,6 @@ $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
     myApp.alert('Here comes About page');
 })
+function suscribir(){
+    window.FirebasePlugin.subscribe("example");
+}
