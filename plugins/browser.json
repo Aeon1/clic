@@ -19,16 +19,9 @@
         "cordova-plugin-firebase": {
             "PACKAGE_NAME": "com.innovacion.clic"
         },
-        "cordova-plugin-firebase-messaging": {
+        "cordova-plugin-fcm": {
             "PACKAGE_NAME": "com.innovacion.clic"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-cocoapod-support": {
-            "PACKAGE_NAME": "com.innovacion.clic"
-        },
-        "cordova-plugin-firebase-hooks": {
-            "PACKAGE_NAME": "com.innovacion.clic"
-        }
-    }
+    "dependent_plugins": {}
 }

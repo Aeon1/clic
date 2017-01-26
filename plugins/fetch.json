@@ -215,34 +215,18 @@
         "is_top_level": true,
         "variables": {}
     },
-    "nl.x-services.plugins.insomnia": {
+    "cordova-plugin-fcm": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-insomnia@*"
+            "id": "cordova-plugin-fcm@*"
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-firebase-hooks": {
+    "cordova-plugin-fcm-config": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-firebase-hooks"
-        },
-        "is_top_level": false,
-        "variables": {}
-    },
-    "cordova-plugin-cocoapod-support": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-cocoapod-support"
-        },
-        "is_top_level": false,
-        "variables": {}
-    },
-    "cordova-plugin-firebase-messaging": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-firebase-messaging"
+            "id": "cordova-plugin-fcm-config"
         },
         "is_top_level": true,
         "variables": {}

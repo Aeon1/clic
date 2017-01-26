@@ -17,19 +17,11 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-firebase-messaging/www/FirebaseMessaging.js",
-        "id": "cordova-plugin-firebase-messaging.FirebaseMessaging",
-        "pluginId": "cordova-plugin-firebase-messaging",
-        "merges": [
-            "cordova.plugins.firebase.messaging"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-firebase-messaging/www/FirebaseMessaging.js",
-        "id": "cordova-plugin-firebase-messaging.FirebaseMessaging",
-        "pluginId": "cordova-plugin-firebase-messaging",
-        "merges": [
-            "cordova.plugins.firebase.messaging"
+        "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+        "id": "cordova-plugin-fcm.FCMPlugin",
+        "pluginId": "cordova-plugin-fcm",
+        "clobbers": [
+            "FCMPlugin"
         ]
     }
 ];
@@ -40,9 +32,7 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.5",
     "cordova-plugin-statusbar": "1.0.1",
     "cordova-plugin-firebase": "0.1.19",
-    "cordova-plugin-cocoapod-support": "1.2.14",
-    "cordova-plugin-firebase-hooks": "0.9.6",
-    "cordova-plugin-firebase-messaging": "0.9.0"
+    "cordova-plugin-fcm": "2.1.1"
 }
 // BOTTOM OF METADATA
 });
